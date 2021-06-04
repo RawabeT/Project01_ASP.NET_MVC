@@ -11,6 +11,13 @@ namespace Project01.Models
         public int TotalPrice { get; set; }
         public int Quantity { get; set; }
         public DateTime OrderDate { get; set; }
-        //public int ItemId { get; set; }
+
+
+        //relationship with customer
+        public int CustomerId { get; set; }
+        public CustomerModel Customer { get; set; }
+
+        //Relationship with items
+        public List<ItemModel> Items { get; set; }
     }
 }

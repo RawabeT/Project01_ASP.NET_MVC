@@ -8,10 +8,15 @@ namespace Project01.Models
     public class CartModel
     {
         public int Id { get; set; }
-        public string Image { get; set; }
-        public int TotalPrice { get; set; }
-        public string ItemName { get; set; }
+        public ItemModel Item { get; set; }
         public int Quantity { get; set; }
+
+        //relationship with customer
+        public int CustomerId { get; set; }
+        public CustomerModel Customer { get; set; }
+
+        //Relationship with items
+        public List<ItemModel> Items { get; set; }
 
     }
 }

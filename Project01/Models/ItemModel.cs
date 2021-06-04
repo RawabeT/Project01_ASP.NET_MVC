@@ -21,5 +21,14 @@ namespace Project01.Models
         public string Description { get; set; }
         //Item type : Fruit or Vegetable
         public string Type { get; set; }
+
+        //relationship with customer
+        public int CustomerId { get; set; }
+        public CustomerModel Customer { get; set; }
+
+        //relationship with cart
+        public int CartId { get; set; }
+        public CartModel Cart { get; set; }
+
     }
 }
